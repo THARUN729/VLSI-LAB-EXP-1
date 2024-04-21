@@ -3,7 +3,7 @@ AIM: To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx IS
 
 APPARATUS REQUIRED: Xilinx 14.7 Spartan6 FPGA
 
-PROCEDURE: STEP:1 Start the Xilinx navigator, Select and Name the New project. STEP:2 Select the device family, device, package and speed. STEP:3 Select new source in the New Project and select Verilog Module as the Source type. STEP:4 Type the File Name and Click Next and then finish button. Type the code and save it. STEP:5 Select the Behavioral Simulation in the Source Window and click the check syntax. STEP:6 Click the simulation to simulate the program and give the inputs and verify the outputs as per the truth table. STEP:7 Select the Implementation in the Sources Window and select the required file in the Processes Window. STEP:8 Select Check Syntax from the Synthesize XST Process. Double Click in the Floorplan Area/IO/Logic-Post Synthesis process in the User Constraints process group. UCF(User constraint File) is obtained. STEP:9 In the Design Object List Window, enter the pin location for each pin in the Loc column Select save from the File menu. STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here. STEP:12 Load the Bit file into the SPARTAN 6 FPGA STEP:11 On the board, by giving required input, the LEDs starts to glow light, indicating the output.
+PROCEDURE:``` STEP:1 Start the Xilinx navigator, Select and Name the New project. STEP:2 Select the device family, device, package and speed. STEP:3 Select new source in the New Project and select Verilog Module as the Source type. STEP:4 Type the File Name and Click Next and then finish button. Type the code and save it. STEP:5 Select the Behavioral Simulation in the Source Window and click the check syntax. STEP:6 Click the simulation to simulate the program and give the inputs and verify the outputs as per the truth table. STEP:7 Select the Implementation in the Sources Window and select the required file in the Processes Window. STEP:8 Select Check Syntax from the Synthesize XST Process. Double Click in the Floorplan Area/IO/Logic-Post Synthesis process in the User Constraints process group. UCF(User constraint File) is obtained. STEP:9 In the Design Object List Window, enter the pin location for each pin in the Loc column Select save from the File menu. STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here. STEP:12 Load the Bit file into the SPARTAN 6 FPGA STEP:11 On the board, by giving required input, the LEDs starts to glow light, indicating the output.```
 
 Logic Diagram :
 
@@ -42,6 +42,7 @@ Full Subtractor:
 VERILOG CODE:
 
 # Logic Gates:
+```
 module logicgate (a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate);
 input a,b;  
 output andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate;
@@ -53,24 +54,30 @@ nor(norgate,a,b);
 xnor(xnorgate,a,b);
 not(notgate,a);
 endmodule
+```
 
 # Half Adder:
+```
 module halfadder(a,b,sum,carry);
 input a,b;
 output sum,carry;
 xor g1(sum,a,b);
 and g2(carry,a,b);
 endmodule
+```
 
 # Half Subractor:
+```
 module halfsubtractor(a,b,diff,borrow);
 input a,b;
 output diff,borrow;
 xor g1(diff,a,b);
 and g2(borrow,~a,b);
 endmodule
+```
 
 # Full Adder:
+```
 module fadd(a,b,c,sum,carry);
 input a,b,c;
 output sum,carry;
@@ -81,8 +88,10 @@ xor g3(sum,w1,c);
 and g4(w3,w1,c);
 or g5(carry,w3,w2);
 endmodule
+```
 
 # Full Subractor:
+```
 module fs(a,b,bin,d,bout);
 input a,b,bin; 
 output d,bout;
@@ -93,8 +102,10 @@ and g3(w2,a,~w1);
 and g4(w3,~b,bin);
 or g5(bout,w2,w3);
 endmodule
+```
 
 # 4 bit ripple carry adder:
+```
 
 module rippe_adder(S,Cout,X,Y,Cin);
 input [3:0] X,Y;
@@ -118,8 +129,10 @@ and G3(w2,X,Ci);
 and G4(w3,X,Y);
 or G5(CO,w3,w3);
 endmodule
+```
 
 # 8 bit ripple carry adder:
+```
 module rippe_adder(S,Cout,X,Y,Cin);
 input [7:0] X,Y;
 input Cin;
@@ -146,6 +159,7 @@ and G3(w2,X,Ci);
 and G4(w3,X,Y);
 or G5(CO,w3,w3);
 endmodule
+```
 
 OUTPUT:
 # OR GATE:
