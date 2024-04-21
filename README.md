@@ -1,4 +1,4 @@
-![image](https://github.com/THARUN729/VLSI-LAB-EXP-1/assets/161407766/4734a28c-54a9-4e77-b380-579cf77ead9a)# VLSI-LAB-EXPERIMENTS
+
 AIM: To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
 
 APPARATUS REQUIRED: Xilinx 14.7 Spartan6 FPGA
