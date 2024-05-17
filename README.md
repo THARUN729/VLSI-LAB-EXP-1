@@ -1,8 +1,11 @@
-AIM: To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
+# AIM:
+To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
 
-APPARATUS REQUIRED: Xilinx 14.7 Spartan6 FPGA
+# APPARATUS REQUIRED:
+Xilinx 14.7 Spartan6 FPGA
 
-PROCEDURE:
+# PROCEDURE:
+```
 STEP:1 Start the Xilinx navigator, Select and Name the New project.
 STEP:2 Select the device family, device, package and speed. 
 STEP:3 Select new source in the New Project and select Verilog Module as the Source type.
@@ -14,6 +17,7 @@ STEP:8 Select Check Syntax from the Synthesize XST Process. Double Click in the 
 STEP:9 In the Design Object List Window, enter the pin location for each pin in the Loc column Select save from the File menu.
 STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here. STEP:12 Load the Bit file into the SPARTAN 6 FPGA
 STEP:11 On the board, by giving required input, the LEDs starts to glow light, indicating the output.
+```
 
 Logic Diagram :
 
