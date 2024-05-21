@@ -1,3 +1,6 @@
+# EXP.NO:01
+# DATE:13/02/2024
+# SIMULATION AND IMPLEMENTATION OF LOGIC GATES,ADDERS AND SUBTRACTOR
 # AIM:
 To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
 
